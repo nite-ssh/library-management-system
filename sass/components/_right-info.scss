@@ -37,5 +37,9 @@
     padding: 12px 15px;
   }
 
+  i:before {
+    content: none;
+  }
+
   @import "./action-strip";
 }

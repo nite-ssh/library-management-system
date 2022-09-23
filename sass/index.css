@@ -353,6 +353,9 @@ body {
 .dashboard .right-info__table-th, .dashboard .right-info__table-data {
   padding: 12px 15px;
 }
+.dashboard .right-info i:before {
+  content: none;
+}
 .dashboard .right-info .action-strip {
   font-weight: 100;
   margin-top: -6rem;

@@ -1,7 +1,9 @@
 import { validation } from "./auth.js";
+import { deleteItem } from "./deleteItem.js";
 
 let proceed = false;
 let infoData = [];
+let noOfDaysData = [];
 
 const clearFields = () => {
   document.querySelectorAll(".action-strip__textfield").forEach((element) => {
@@ -17,7 +19,24 @@ document.querySelector(".btn--clear").addEventListener("click", (event) => {
   clearFields();
 });
 
-const toBeReturnedHandler = () => {};
+const toBeReturnedHandler = () => {
+  const dateSelectedValue = document.querySelector(
+    "[name='bookTakenIn']"
+  ).value;
+  const bookReturnedValue = document.querySelector(
+    "[name='bookReturnDate']"
+  ).value;
+
+  const dateSelected = new Date(dateSelectedValue);
+  const dateToBeReturned = new Date(bookReturnedValue);
+  const difference = dateToBeReturned.getTime() - dateSelected.getTime();
+
+  if (difference >= 0) {
+    let TotalDays = Math.ceil(difference / (1000 * 3600 * 24));
+    return TotalDays;
+  }
+  return;
+};
 
 let count = 1;
 
@@ -37,19 +56,39 @@ function createTableData() {
 
     firstName.classList.add("right-info__table-data");
   });
+
+  noOfDaysData.forEach((day) => {
+    const noOfDays = tr.appendChild(document.createElement("td"));
+
+    noOfDays.innerHTML = `${day}`;
+
+    noOfDays.classList.add("right-info__table-data");
+  });
+
   const pen = tr.appendChild(document.createElement("td"));
-  pen.classList.add("fas");
-  pen.classList.add("fa-pen");
+  pen.appendChild(document.createElement("i")).classList.add("fas", "fa-pen");
 
   const trash = tr.appendChild(document.createElement("td"));
-  trash.classList.add("fas");
-  trash.classList.add("fa-trash");
+  trash
+    .appendChild(document.createElement("i"))
+    .classList.add("fas", "fa-trash");
 
   console.log(tr);
 
   document.querySelector(".right-info__table-body").appendChild(tr);
+
   clearFields();
   infoData = [];
+
+  document.querySelectorAll(".fa-trash").forEach((element) => {
+    element.addEventListener("click", (event) => {
+      deleteItem(event);
+    });
+  });
+
+  document.querySelectorAll(".fa-pen").forEach((element) => {
+    element.addEventListener("click", (event) => {});
+  });
 }
 
 document.querySelector(".btn--submit").addEventListener("click", (event) => {
@@ -59,6 +98,7 @@ document.querySelector(".btn--submit").addEventListener("click", (event) => {
       infoData.push(element.value);
       return;
     } else {
+      proceed = false;
       return;
     }
   });
@@ -69,18 +109,21 @@ document.querySelector(".btn--submit").addEventListener("click", (event) => {
       return;
     }
 
-    if (element.value) {
-      if (proceed) {
+    if (proceed) {
+      if (element.value) {
         const tr = document.createElement("tr");
         infoData.push(element.value);
-
         element.classList.remove("warning");
-
         return;
       }
-      return;
     }
   });
 
-  createTableData();
+  noOfDaysData.push(`${toBeReturnedHandler()}`);
+  console.log(noOfDaysData);
+
+  if (proceed == true) {
+    createTableData();
+  }
+  noOfDaysData = [];
 });
