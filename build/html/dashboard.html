@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title></title>
+  <meta name="description" content="" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+
+<body>
+  <section class="dashboard" id="dashboard">
+    <nav class="nav">
+      <ul class="nav__links">
+
+        <li class="nav__link-wrapper">
+          <a class="nav__link" href="#dashboard">
+            <i class="icons fas fa-book"></i>
+            <p class="link nav__link-text">Dashboard</p>
+          </a>
+        </li>
+
+        <li class="nav__link-wrapper">
+          <a class="nav__link" href="#admin">
+            <i class="icons fas fa-person"></i>
+            <p class="link nav__link-text">Admin</p>
+          </a>
+        </li>
+
+        <li class="nav__link-wrapper">
+          <a class="nav__link" href="#admin">
+            <i class="icons fas fa-hand"></i>
+            <p class="link nav__link-text">Sign Out</p>
+          </a>
+        </li>
+
+      </ul>
+    </nav>
+
+    <article class="card right-info">
+      <section class="right-info__dashboard-wrapper">
+        <div class="right-info__dashboard">
+          <div class="right-info__people">
+            <h3 class="right-info__number">
+              21
+            </h3>
+            <p class="right-info__description">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            </p>
+          </div>
+
+          <div class="right-info__books">
+            <h3 class="right-info__number">
+              21
+            </h3>
+            <p class="right-info__description">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            </p>
+          </div>
+
+          <div class="right-info__admin">
+            <h3 class="right-info__number">
+              21
+            </h3>
+            <p class="right-info__description">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            </p>
+          </div>
+
+        </div>
+      </section>
+
+      <section class="right-info__admin-page">
+
+        <table class="card right-info__styled-table" id="admin">
+          <thead class="right-info__table-head">
+            <tr class="right-info__table-head-row">
+              <th class="right-info__table-th">S.N</th>
+              <th class="right-info__table-th">First Name</th>
+              <th class="right-info__table-th">Last Name</th>
+              <th class="right-info__table-th">Book Name</th>
+              <th class="right-info__table-th">ISBN No</th>
+              <th class="right-info__table-th">Book taken in</th>
+              <th class="right-info__table-th">Book to be returned to</th>
+              <th class="right-info__table-th">Number of remaining days</th>
+              <th class="right-info__table-th">Edit Info</th>
+              <th class="right-info__table-th">Delete Item</th>
+            </tr>
+          </thead>
+          <tbody class="right-info__table-body">
+          </tbody>
+        </table>
+
+        <div class="card action-strip">
+          <h2 class="title action-strip__title">Add Info</h2>
+          <form class="action-strip__wrapper">
+            <div>
+              <div class="action-strip__input-wrapper">
+                <input class="textfield action-strip__textfield" type="text" name="firstName"
+                  placeholder="Enter your first name"></input>
+              </div>
+              <div class="action-strip__input-wrapper">
+                <input class="textfield action-strip__textfield"" type=" text" name="lastName"
+                  placeholder="Enter your last name"></input>
+              </div>
+
+              <div class="action-strip__input-wrapper">
+                <input class="textfield action-strip__textfield"" type=" text" name="bookName"
+                  placeholder="Enter your book name"></input>
+              </div>
+              <div class="action-strip__input-wrapper">
+                <input class="textfield action-strip__textfield" type="text" name="isbnNum"
+                  placeholder="Enter the ISBN number"></input>
+              </div>
+            </div>
+
+            <div class="action-strip__date-container">
+
+              <div class="action-strip__date-wrapper">
+                <label class="action-strip__date-label-name">Book taken in</label>
+                <input class="action-strip__date" type="date" name="bookTakenIn" />
+              </div>
+              <div class="action-strip__date-wrapper">
+                <label class="action-strip__date-label-name">Book return date</label>
+                <input class="action-strip__date" type="date" name="bookReturnDate" />
+              </div>
+
+            </div>
+          </form>
+
+          <div class="action-strip__btn-container">
+            <div class="action-strip__btn-wrapper">
+              <button class="btn btn--clear" type="reset">Clear All</button>
+            </div>
+            <div class="action-strip__btn-wrapper">
+              <button class="btn btn--submit" type="submit">Submit</button>
+            </div>
+          </div>
+
+        </div>
+      </section>
+    </article>
+  </section>
+  </section>
+  <script src="../js/addItem.js" type="module"></script>
+</body>
+</form>
+
+</html>

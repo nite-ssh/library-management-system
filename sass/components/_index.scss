@@ -1,0 +1,56 @@
+//container
+.container {
+  width: 80%;
+  margin: auto;
+}
+
+//overlay
+.overlay {
+  padding: 2rem;
+  flex-direction: column;
+}
+
+//title
+.title {
+  font-size: 1.8rem;
+  color: $secondaryColor;
+  margin-bottom: 1rem;
+}
+
+//description
+.description {
+  font-size: 1rem;
+  font-style: italic;
+  font-weight: 100;
+  margin-bottom: 1rem;
+}
+
+//card
+.card {
+  max-width: 50%;
+  margin: 10rem auto;
+  backdrop-filter: blur(0.5px);
+  box-shadow: 0 8px 32px 0 rgba(45, 104, 198, 0.37);
+}
+
+.link {
+  font-weight: 200;
+  font-size: 1.5rem;
+  color: $whiteColor;
+  &:hover {
+    font-weight: bolder;
+    color: $secondaryColor;
+  }
+}
+
+.icons {
+  font-size: 2rem;
+}
+
+//warning
+.warning {
+  border: 2px solid red !important;
+}
+
+@import "./btn";
+@import "./textfield";

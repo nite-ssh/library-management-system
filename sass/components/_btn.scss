@@ -1,0 +1,25 @@
+.btn {
+  font-size: 1rem;
+  background-color: rgba(255, 255, 255, 0);
+  border: 0.3rem dashed $secondaryColor;
+  padding: 0.8rem 1rem;
+  text-align: center;
+  text-transform: uppercase;
+  cursor: pointer;
+  &:hover {
+    border-color: $primaryColor;
+  }
+
+  &--clear {
+    border-color: red;
+    &:hover {
+      border-color: rgb(207, 34, 34);
+    }
+  }
+  &--submit {
+    border-color: green;
+    &:hover {
+      border-color: rgb(22, 100, 22);
+    }
+  }
+}

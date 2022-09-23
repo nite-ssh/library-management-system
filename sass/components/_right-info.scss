@@ -1,0 +1,41 @@
+.right-info {
+  &__dashboard-wrapper {
+    height: 100vh;
+  }
+  &__dashboard {
+    height: 55%;
+    text-align: center;
+    padding: 2rem;
+    @include flex(center, center);
+  }
+  &__number {
+    font-size: 3rem;
+  }
+  &__description {
+    margin-top: 1rem;
+    font-weight: 100;
+  }
+
+  &__admin-page {
+    overflow: hidden;
+  }
+
+  &__table-head-row {
+    background-color: $secondaryColor;
+    color: $whiteColor;
+    text-align: left;
+  }
+  &__table-data {
+    border-bottom: 1px solid #dddddd;
+  }
+
+  &__table-data:nth-of-type(even) {
+    background-color: #f3f3f3;
+  }
+  &__table-th,
+  &__table-data {
+    padding: 12px 15px;
+  }
+
+  @import "./action-strip";
+}

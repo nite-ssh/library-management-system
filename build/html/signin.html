@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<title>Sign In</title>
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="../css/style.css" />
+</head>
+
+<body>
+
+    <section class="signin card">
+        <button class="btn signin__homebtn--homepage-btn" onclick="location.href='./index.html'">
+                <i class="fas fa-home"></i>
+        </button>
+
+        <article class="signin-left">
+            <div class="overlay signin-left__overlay">
+                <h1 class="signin-left__title title">
+                    Sign In to Library Management System
+                </h1>
+                <p class="description signin-left__description">
+                    using your email account
+                </p>
+                <form class="signin-left__form">
+                    <div class="signin-left__email">
+                        <input type="email" placeholder="Enter your email" class="signin-left__textfield textfield" name="loginEmail" />
+                    </div>
+                    <div class="signin-left__password">
+                        <input type="password" placeholder="Enter your password" name="loginPassword"
+                            class="signin-left__textfield textfield" />
+                    </div>
+                        <button class="btn signin-left__btn" type="submit" id="signinButton"">
+                            Sign In
+                        </button>
+                </form>
+            </div>
+        </article>
+
+        <aside class="signin-right">
+            <div class="overlay signin-right__overlay">
+                <h1 class="signin-right__title">New Here!</h1>
+                <p class="description signin-right__description">
+                    Enter your personal details and start journey with us
+                </p>
+                <button class="btn signin-right__btn" type="button" onclick="location.href = '../html/signup.html'">Sign
+                    Up</button>
+            </div>
+        </aside>
+    </section>
+    <script src="../js/auth.js" type="module"></script>
+</body>
+
+</html>

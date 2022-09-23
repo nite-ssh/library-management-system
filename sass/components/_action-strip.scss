@@ -1,0 +1,43 @@
+.action-strip {
+  font-weight: 100;
+  margin-top: -6rem;
+  padding: 2rem;
+
+  &__title {
+    text-align: center;
+  }
+
+  &__wrapper {
+    display: flex;
+    text-align: center;
+  }
+
+  &__date-container {
+    margin-left: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  &__date-label-name {
+    line-height: 1rem;
+  }
+
+  &__date {
+    padding: 0.8rem 0rem;
+    border: none;
+    background-color: #eceaea;
+    color: grey;
+    text-align: center;
+  }
+
+  &__btn-container {
+    display: flex;
+    width: 70%;
+    justify-content: space-around;
+  }
+
+  &__btn-wrapper {
+    margin-top: 2rem;
+  }
+}

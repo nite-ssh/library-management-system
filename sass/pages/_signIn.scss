@@ -1,0 +1,64 @@
+.signin {
+  @include flex(center, center);
+
+  .signin-left {
+    height: 50vh;
+
+    @include flex(center, center);
+    &__overlay {
+      @include flex(center, center);
+    }
+
+    &__title {
+      text-align: center;
+    }
+
+    &__btn {
+      padding: 1rem 2rem;
+      width: 100%;
+      text-align: center;
+      text-transform: uppercase;
+    }
+  }
+  .signin-right {
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.5) 0%,
+        rgba(0, 0, 0, 0.5) 90%
+      ),
+      url(../../build/assets/images/signin-background.jpg);
+    height: 50vh;
+    @include flex(center, center);
+
+    &__overlay {
+      @include flex(center, center);
+    }
+
+    &__title {
+      color: rgb(234, 234, 242);
+      text-align: center;
+    }
+
+    &__description {
+      text-align: center;
+      color: $whiteColor;
+      line-height: 1.5rem;
+    }
+
+    &__btn {
+      font-size: 1rem;
+      background-color: rgba(255, 255, 255, 0);
+      color: white;
+      border: 0.3rem dashed $secondaryColor;
+      padding: 1rem 2rem;
+      text-align: center;
+      text-transform: uppercase;
+      &:hover {
+        border-color: $primaryColor;
+      }
+    }
+
+    &__signup-link {
+      color: $whiteColor;
+    }
+  }
+}

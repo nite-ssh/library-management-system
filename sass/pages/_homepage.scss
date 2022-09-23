@@ -1,0 +1,48 @@
+//navigation
+.navigation {
+  @include flex(space-between, center);
+  height: 10vh;
+  &__branding {
+    padding: 0rem 2rem;
+    @include flex(center, center);
+    i {
+      font-size: 1.6rem;
+      padding: 0 1rem 0 0;
+    }
+  }
+
+  &__links {
+    width: 250px;
+    @include flex(space-around, center);
+  }
+}
+
+//hero
+.hero {
+  height: 90vh;
+  background: url(../assets/images/hero-background.jpg) no-repeat center center;
+  background-size: cover;
+  &__container {
+    text-align: center;
+    width: 50%;
+    margin: auto;
+    padding: 14rem 0 0 0;
+  }
+  &__title {
+    font-size: 4rem;
+    text-transform: uppercase;
+    color: #f4f4f4;
+    padding: 0.8rem;
+    background-color: #0f3149db;
+  }
+}
+
+//footer
+.footer {
+  &__info {
+    text-align: center;
+    padding: 1.2rem;
+    background-color: $primaryColor;
+    color: #f4f4f4;
+  }
+}

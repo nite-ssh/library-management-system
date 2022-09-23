@@ -1,0 +1,16 @@
+.textfield {
+  padding: 0.8rem 3rem;
+  border: none;
+  border-radius: 0.2rem;
+  outline: none;
+  background-color: #eceaea;
+  margin-bottom: 1rem;
+
+  &:active {
+    outline: none;
+    background: none;
+  }
+  &::placeholder {
+    color: grey;
+  }
+}

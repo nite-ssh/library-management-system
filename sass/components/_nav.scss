@@ -1,0 +1,24 @@
+.nav {
+  position: fixed;
+  height: 100vh;
+  width: 17%;
+  background-color: $primaryColor;
+
+  &__links {
+    height: 30vh;
+    margin-left: 3rem;
+    @include flex(center, flex-start);
+    flex-direction: column;
+    list-style-type: none;
+  }
+
+  &__link {
+    @include flex(center, center);
+    line-height: 3.5rem;
+    color: white;
+  }
+
+  &__link-text {
+    padding-left: 1rem;
+  }
+}
