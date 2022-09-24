@@ -6,6 +6,32 @@ let proceed = false;
 let infoData = [];
 let noOfDaysData = [];
 
+document
+  .querySelector("[name='signOut']")
+  .addEventListener("click", (event) => {
+    location.href = `${location.origin}/build/html/index.html`;
+  });
+
+document.getElementById("root").addEventListener("click", (event) => {
+  try {
+    var userCount = document
+      .querySelector(".right-info__wrapper")
+      .parentNode.querySelectorAll(".right-info__wrapper");
+  } catch (e) {
+    return;
+  }
+
+  if (userCount != null) {
+    document.querySelector(
+      "[name='numberOfUsers']"
+    ).innerHTML = `${userCount.length}`;
+
+    document.querySelector(
+      "[name='numberOfBooks']"
+    ).innerHTML = `${userCount.length}`;
+  }
+});
+
 const clearFields = () => {
   document.querySelectorAll(".action-strip__textfield").forEach((element) => {
     element.value = "";
@@ -43,12 +69,7 @@ let count = 1;
 
 function createTableData() {
   const tr = document.createElement("tr");
-
-  const serial = tr.appendChild(document.createElement("td"));
-  serial.innerHTML = `${count}`;
-  count++;
-
-  serial.classList.add("right-info__table-data");
+  tr.classList.add("right-info__wrapper");
 
   infoData.forEach((element, i) => {
     const inputValue = tr.appendChild(document.createElement("td"));
@@ -97,38 +118,42 @@ function createTableData() {
   });
 }
 
-document.querySelector(".btn--submit").addEventListener("click", (event) => {
-  document.querySelectorAll(".action-strip__textfield").forEach((element) => {
-    if (validation(element)) {
-      proceed = true;
-      infoData.push(element.value);
-      return;
-    } else {
-      proceed = false;
-      return;
-    }
-  });
-
-  document.querySelectorAll(".action-strip__date").forEach((element) => {
-    if (!element.value) {
-      element.classList.add("warning");
-      return;
-    }
-
-    if (proceed) {
-      if (element.value) {
-        const tr = document.createElement("tr");
+export function btnClickHandler(className) {
+  document.querySelector(className).addEventListener("click", (event) => {
+    document.querySelectorAll(".action-strip__textfield").forEach((element) => {
+      if (validation(element)) {
+        proceed = true;
         infoData.push(element.value);
-        element.classList.remove("warning");
+        return;
+      } else {
+        proceed = false;
         return;
       }
+    });
+
+    document.querySelectorAll(".action-strip__date").forEach((element) => {
+      if (!element.value) {
+        element.classList.add("warning");
+        return;
+      }
+
+      if (proceed) {
+        if (element.value) {
+          const tr = document.createElement("tr");
+          infoData.push(element.value);
+          element.classList.remove("warning");
+          return;
+        }
+      }
+    });
+
+    noOfDaysData.push(`${toBeReturnedHandler()}`);
+
+    if (proceed == true) {
+      createTableData();
     }
+    noOfDaysData = [];
   });
+}
 
-  noOfDaysData.push(`${toBeReturnedHandler()}`);
-
-  if (proceed == true) {
-    createTableData();
-  }
-  noOfDaysData = [];
-});
+btnClickHandler(".btn--submit");
