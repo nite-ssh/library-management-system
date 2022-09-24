@@ -95,6 +95,9 @@ body {
 .btn--submit:hover {
   border-color: rgb(22, 100, 22);
 }
+.btn--edit {
+  display: none;
+}
 
 .textfield {
   padding: 0.8rem 3rem;
@@ -116,6 +119,10 @@ body {
 }
 .textfield::placeholder {
   color: grey;
+}
+
+.edit-modal {
+  background-color: green;
 }
 
 .navigation {

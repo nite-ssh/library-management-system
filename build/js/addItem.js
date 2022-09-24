@@ -72,12 +72,12 @@ function createTableData() {
   });
 
   const pen = tr.appendChild(document.createElement("td"));
-  pen.appendChild(document.createElement("i")).classList.add("fas", "fa-pen");
+  pen.appendChild(document.createElement("p")).classList.add("fas", "fa-pen");
 
   const trash = tr.appendChild(document.createElement("td"));
   trash
-    .appendChild(document.createElement("i"))
-    .classList.add("fas", "fa-trash");
+    .appendChild(document.createElement("p"))
+    .classList.add("fa", "fa-trash");
 
   document.querySelector(".right-info__table-body").appendChild(tr);
 
