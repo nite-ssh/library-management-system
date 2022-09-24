@@ -1,5 +1,6 @@
 import { validation } from "./auth.js";
 import { deleteItem } from "./deleteItem.js";
+import { editItem } from "./editItem.js";
 
 let proceed = false;
 let infoData = [];
@@ -50,11 +51,16 @@ function createTableData() {
   serial.classList.add("right-info__table-data");
 
   infoData.forEach((element, i) => {
-    const firstName = tr.appendChild(document.createElement("td"));
+    const inputValue = tr.appendChild(document.createElement("td"));
 
-    firstName.innerHTML = `${element}`;
+    inputValue.innerHTML = `${element}`;
 
-    firstName.classList.add("right-info__table-data");
+    inputValue.classList.add("right-info__table-data");
+    inputValue.classList.add("text-values");
+
+    if (inputValue.innerHTML[4] == "-") {
+      inputValue.classList.add("date");
+    }
   });
 
   noOfDaysData.forEach((day) => {
@@ -73,8 +79,6 @@ function createTableData() {
     .appendChild(document.createElement("i"))
     .classList.add("fas", "fa-trash");
 
-  console.log(tr);
-
   document.querySelector(".right-info__table-body").appendChild(tr);
 
   clearFields();
@@ -87,7 +91,9 @@ function createTableData() {
   });
 
   document.querySelectorAll(".fa-pen").forEach((element) => {
-    element.addEventListener("click", (event) => {});
+    element.addEventListener("click", (event) => {
+      editItem(event);
+    });
   });
 }
 
@@ -120,7 +126,6 @@ document.querySelector(".btn--submit").addEventListener("click", (event) => {
   });
 
   noOfDaysData.push(`${toBeReturnedHandler()}`);
-  console.log(noOfDaysData);
 
   if (proceed == true) {
     createTableData();
