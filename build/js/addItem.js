@@ -9,7 +9,7 @@ let noOfDaysData = [];
 document
   .querySelector("[name='signOut']")
   .addEventListener("click", (event) => {
-    location.href = `${location.origin}/build/html/index.html`;
+    location.href = `${location.origin}/library-management-system/build/index.html`;
   });
 
 document.getElementById("root").addEventListener("click", (event) => {

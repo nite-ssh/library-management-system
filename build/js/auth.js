@@ -16,11 +16,11 @@ const login = (email, password) => {
       email.value == localStorage.getItem("email") &&
       password.value == localStorage.getItem("password")
     ) {
-      if (location.href == `${location.origin}/build/html/signin.html`) {
+      if (location.href == `${location.origin}/library-management-system/build/pages/signin.html`) {
         document
           .querySelector(".signin-left__btn")
           .addEventListener("click", (e) => {
-            location.href = "../html/dashboard.html";
+            location.href = "../pages/dashboard.html";
           });
       }
       return;
@@ -46,7 +46,7 @@ const register = (name, email, password) => {
   }
 };
 
-if (location.href == `${location.origin}/build/html/signup.html`) {
+if (location.href == `${location.origin}/library-management-system/build/pages/signup.html`) {
   document.querySelector(".signup-left__btn").addEventListener("click", (e) => {
     e.preventDefault();
     //selectors
@@ -62,7 +62,7 @@ if (location.href == `${location.origin}/build/html/signup.html`) {
   });
 }
 
-if (location.href == `${location.origin}/build/html/signin.html`) {
+if (location.href == `${location.origin}/library-management-system/build/pages/signin.html`) {
   document.querySelector(".signin-left__btn").addEventListener("click", (e) => {
     const email = document.querySelector("[name='loginEmail']");
     const password = document.querySelector("[name='loginPassword']");
