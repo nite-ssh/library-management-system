@@ -18,36 +18,35 @@
   <link rel="stylesheet" href="../css/index.css" />
 </head>
 
-<body id="root">
-  <section class="dashboard" id="dashboard">
+<body class="root">
     <nav class="nav">
+      <h2 class="nav__title">Library Management System</h2>
       <ul class="nav__links">
         <li class="nav__link-wrapper">
           <a class="nav__link" href="#dashboard">
-            <i class="icons fas fa-book"></i>
-            <p class="link nav__link-text">Dashboard</p>
+            <i class="fas fa-book"></i>
+            <p class="nav__link-text">Dashboard</p>
           </a>
         </li>
 
         <li class="nav__link-wrapper">
           <a class="nav__link" href="#admin">
-            <i class="icons fas fa-person"></i>
-            <p class="link nav__link-text">Admin</p>
+            <i class="fas fa-person"></i>
+            <p class="nav__link-text">Admin</p>
           </a>
         </li>
 
         <li class="nav__link-wrapper">
           <a class="nav__link" href="#admin" name="signOut">
-            <i class="icons fas fa-hand"></i>
-            <p class="link nav__link-text">Sign Out</p>
+            <i class="fas fa-hand"></i>
+            <p class="nav__link-text">Sign Out</p>
           </a>
         </li>
       </ul>
     </nav>
 
     <article class="right-info">
-
-        <section class="card right-info__dashboard-wrapper">
+        <section class="right-info__dashboard-wrapper">
           <div class="right-info__dashboard">
             <div class="right-info__people">
               <h3 class="right-info__number" name="numberOfUsers">0</h3>
@@ -73,22 +72,7 @@
         </section>
 
       <section class="right-info__admin-page">
-        <!-- <table class="card right-info__styled-table" id="admin">
-            <thead class="right-info__table-head">
-              <tr class="right-info__table-head-row">
-                <th class="right-info__table-th">First Name</th>
-                <th class="right-info__table-th">Last Name</th>
-                <th class="right-info__table-th">Book Name</th>
-                <th class="right-info__table-th">ISBN No</th>
-                <th class="right-info__table-th">Book taken in</th>
-                <th class="right-info__table-th">Book to be returned to</th>
-                <th class="right-info__table-th">Number of remaining days</th>
-                <th class="right-info__table-th">Edit Info</th>
-                <th class="right-info__table-th">Delete Item</th>
-              </tr>
-            </thead>
-            <tbody class="right-info__table-body"></tbody>
-          </table> -->
+        
         <article class="table">
           <table cellspacing="0" cellpadding="0" class="table__wrapper">
             <thead class="table__head">
@@ -120,7 +104,7 @@
             </tbody>
           </table>
         </article>
-        <div class="card action-strip">
+        <div class="action-strip">
           <h2 class="title action-strip__title">Add Info</h2>
           <form class="action-strip__wrapper">
             <div>
@@ -170,7 +154,6 @@
       </section>
     </article>
   </section>
-
   <script src="../js/addItem.js" type="module"></script>
 </body>
 
