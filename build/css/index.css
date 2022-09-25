@@ -298,7 +298,7 @@ body {
 .dashboard {
   display: flex;
   height: 95vh;
-  min-width: 120%;
+  min-width: 100%;
 }
 .dashboard .nav {
   position: fixed;
@@ -325,13 +325,17 @@ body {
 .dashboard .nav__link-text {
   padding-left: 1rem;
 }
+.dashboard .right-info {
+  margin: auto;
+  width: 450%;
+}
 .dashboard .right-info__dashboard-wrapper {
-  height: 100vh;
+  margin-left: 30rem;
 }
 .dashboard .right-info__dashboard {
   height: 55%;
   text-align: center;
-  padding: 2rem;
+  padding: 2rem 6rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -346,26 +350,54 @@ body {
 .dashboard .right-info__admin-page {
   overflow: hidden;
 }
-.dashboard .right-info__table-head-row {
-  background-color: #008cac;
-  color: #f4f4f4;
-  text-align: left;
+.dashboard .right-info .table {
+  width: 60%;
+  text-align: center;
+  margin: auto;
 }
-.dashboard .right-info__table-data {
-  border-bottom: 1px solid #dddddd;
+.dashboard .right-info .table__wrapper {
+  width: 100%;
+  font-size: 16px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 25px 20px -25px rgba(0, 0, 0, 0.1);
 }
-.dashboard .right-info__table-data:nth-of-type(even) {
-  background-color: #f3f3f3;
+.dashboard .right-info .table__head {
+  border-spacing: 0;
 }
-.dashboard .right-info__table-th, .dashboard .right-info__table-data {
-  padding: 12px 15px;
+.dashboard .right-info .table__head-tr:nth-child(1) {
+  background-color: #fbfbfb;
+  border-radius: 10px 0 0 0;
+}
+.dashboard .right-info .table__head-tr:nth-last-child(1) {
+  border-radius: 0 10px 0 0;
+}
+.dashboard .right-info .table__head-td {
+  font-size: 18px;
+  font-weight: bold;
+  color: #666;
+  padding: 10px;
+}
+.dashboard .right-info .table__body:hover {
+  box-shadow: 0 10px 20px -15px rgba(0, 0, 0, 0.04);
+  background-color: rgba(237, 237, 237, 0.1098039216);
+}
+.dashboard .right-info .table__body-td {
+  padding: 20px 55px;
+  color: #666;
+}
+@media (max-width: 700px) {
+  .dashboard .right-info .table {
+    width: 90%;
+  }
 }
 .dashboard .right-info i:before {
   content: none;
 }
 .dashboard .right-info .action-strip {
   font-weight: 100;
-  margin-top: -6rem;
+  margin-top: 6rem;
+  margin-left: 30rem;
   padding: 2rem;
 }
 .dashboard .right-info .action-strip__title {

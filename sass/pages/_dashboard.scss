@@ -1,7 +1,7 @@
 .dashboard {
   display: flex;
   height: 95vh;
-  min-width: 120%;
+  min-width: 100%;
 
   @import "../components/nav";
   @import "../components/right-info";
