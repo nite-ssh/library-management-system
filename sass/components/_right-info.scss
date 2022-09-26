@@ -1,36 +1,42 @@
 .right-info {
-    margin: auto;
-    width: 450%;
+  width: 100%;
+  margin-left: 200px;
 
-    &__dashboard-wrapper{
-      margin-left: 30rem;
-    }
- 
+  &__dashboard-wrapper {
+    height: 100vh;
+    @include flex(center, center);
+    flex-direction: column;
+
+  }
+
   &__dashboard {
-    height: 55%;
-    text-align: center;
-    padding: 2rem 6rem;
+    width: 100%;
     @include flex(center, center);
   }
+
+  &__people,
+  &__books,
+  &__admin {
+    margin: 2rem;
+    padding: 2rem 1rem;
+    font-size: 1.1rem;
+    text-align: center;
+  }
+
   &__number {
     font-size: 3rem;
+    font-weight: bold;
+    padding-bottom: 1rem;
   }
+
   &__description {
-    margin-top: 1rem;
+    font-size: 1.2rem;
     font-weight: 100;
   }
 
-  &__admin-page {
-    overflow: hidden;
-  }
+  @import "./chart";
 
 
   @import "./table";
-  
-
-  i:before {
-    content: none;
-  }
-
   @import "./action-strip";
 }

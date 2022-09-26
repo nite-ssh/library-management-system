@@ -1,0 +1,45 @@
+
+.action-strip{
+    width: 40%;
+    background-color:white;
+    margin: 3rem auto 5rem auto;
+    padding: 2rem 0rem;
+    &__wrapper{
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        margin: auto;
+    }
+    
+    &__input{
+        padding: 1rem 1rem;
+        width: 100%;
+    }
+
+    &__textfield{
+        width: 100%;
+    }
+
+    &__date-container{
+        display: flex;
+        justify-content: space-around;
+    }
+
+    
+
+    &__date{
+        padding: 1rem;
+    }
+
+    &__btn-container{
+        display: flex;
+        justify-content: center;
+        margin-top: 1rem;
+    }
+    &__btn-wrapper{
+        margin-left:1rem ;
+    }
+    
+
+    
+}

@@ -1,54 +1,101 @@
-.table{
-
-    width: 60%;
-    text-align: center;
-  margin:auto;
-
-  &__wrapper{
-width: 100%;
+.table {
+&__wrapper {
+    width: 95%;
+    margin: 0 auto;
     font-size: 16px;
     background-color: white;
     border-radius: 10px;
     box-shadow: 0 25px 20px -25px rgb(0 0 0 / 10%);
   }
+  &__header {
+    font-size: 24px;
+    font-weight: 300;
+  }
 
-  &__head{
+  
 
+  &__head {
     border-spacing: 0;
   }
 
-  &__head-tr:nth-child(1){
+  &__head-row {
     background-color: $gray1;
-    border-radius: 10px 0 0 0;
-  }
-&__head-tr:nth-last-child(1){
-    border-radius: 0 10px 0 0;
-}
 
-  &__head-td{
+  }
+
+  &__head-row:nth-child(1) {
+    background-color: $gray1;
+  }
+
+  &__head-data {
     font-size: 18px;
-        font-weight: bold;
-        color: #666;
-        padding: 10px;
+    font-weight: 600;
+    color: #666;
+    padding: 10px;
   }
 
-  &__body{
-    &:hover{
-       
-          box-shadow: 0 10px 20px -15px rgb(0 0 0 / 4%);
-          background-color: #ededed1c;
+  &__head-data:nth-child(1) {
+    border-radius: 10px 0 0 0;
+
+  }
+
+  &__head-data:nth-child(1) {
+    border-radius: 0 10px 0 0;
+  }
+
+  &__body-row {
+    transition: $transition;
+&:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 20px -15px rgb(0 0 0 / 4%);
+      background-color: #ededed1c;
     }
   }
 
-   &__body-td{
-    padding: 20px 55px;
+  &__body-data {
+    padding: 10px;
     color: #666;
+
+    
   }
+
+
+
+
+
+  // &__head-tr:nth-child(1) {
+  //   background-color: $gray1;
+  //   border-radius: 10px 0 0 0;
+  // }
+
+  // &__head-tr:nth-last-child(1) {
+  //   border-radius: 0 10px 0 0;
+  // }
+
+  // &__head-td {
+  //   font-size: 18px;
+  //   font-weight: bold;
+  //   color: #666;
+  //   padding: 10px;
+  // }
+
+  // &__body {
+  //   &:hover {
+
+  //     box-shadow: 0 10px 20px -15px rgb(0 0 0 / 4%);
+  //     background-color: #ededed1c;
+  //   }
+  // }
+
+  // &__body-td {
+  //   padding: 20px 55px;
+  //   color: #666;
+  // }
 
 }
 
 @media (max-width: 700px) {
-    .table {
-      width: 90%;
-    }
+  .table {
+    width: 90%;
   }
+}

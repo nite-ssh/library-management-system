@@ -1,10 +1,11 @@
-.textfield {
+.input{
   padding: 0.8rem 3rem;
   border: none;
   border-radius: 0.2rem;
   outline: none;
-  background-color: #eceaea;
+  background-color: rgba(102, 102, 102, 0.096);
   margin-bottom: 1rem;
+  margin-top: 0.5rem;
 
   &:active {
     outline: none;
@@ -13,4 +14,5 @@
   &::placeholder {
     color: grey;
   }
+
 }

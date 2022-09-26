@@ -1,27 +1,35 @@
 .btn {
-  font-size: 1rem;
-  background-color: rgba(255, 255, 255, 0);
-  border: 0.3rem dashed $secondaryColor;
-  padding: 0.8rem 1rem;
-  text-align: center;
-  text-transform: uppercase;
-  cursor: pointer;
+  width: 100%;
+  padding: 0.9rem;
+    border-radius: 0.2rem;
+    background-color: #130f4900;
+    color: $primaryColor;
+  font-size:1rem;
+  font-weight: bolder;
+    text-transform: uppercase;
+    border: 2px solid #130f49;
+    cursor: pointer;
   &:hover {
-    border-color: $primaryColor;
+    color: white;
+    background-color: #1a1564 ;
   }
 
   &--clear {
+    color: red;
     border-color: red;
     &:hover {
-      border-color: rgb(207, 34, 34);
+      background-color:red;
+      color: white;
     }
   }
-  &--submit {
-    border-color: green;
-    &:hover {
-      border-color: rgb(22, 100, 22);
-    }
-  }
+  // &--submit{
+  //   color: green;
+  //   border-color: green;
+  //   &:hover {
+  //     background-color: green;
+  //     color: white;
+  //   }
+  // }
   &--edit {
     display: none;
   }
