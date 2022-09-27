@@ -11,21 +11,35 @@ export const validation = (selectedElement) => {
 };
 
 const login = (name, password) => {
+  const registerValueGetter = JSON.parse(localStorage.getItem("registerValues"));
+
+
+
   if (validation(name) == true && validation(password) == true) {
-    if (
-      name.value == localStorage.getItem("name") &&
-      password.value == localStorage.getItem("password")
-    ) {
-      location.href = "../pages/dashboard.html";
-    }else{
-      alert("Wrong Credentials");
+    const valueReturner = registerValueGetter.every((values) => {
+      debugger;
+      if (
+        name.value == values.name &&
+        password.value == values.password
+      ) {
+
+        return true;
+      } else {
+        alert("Wrong Credentials");
+      }
+    });
+
+    if (valueReturner) {
+      location.href = `${location.origin}/build/pages/dashboard.html`
     }
+  }else{
+    alert("Empty Credentials");
     return;
   }
-  alert("Empty Credentials");
-  return;
+
 }
 
+const registerValues = [];
 
 const register = (name, email, password) => {
   if (
@@ -33,9 +47,16 @@ const register = (name, email, password) => {
     validation(email) == true &&
     validation(password) == true
   ) {
-    window.localStorage.setItem("name", name.value);
-    window.localStorage.setItem("email", email.value);
-    window.localStorage.setItem("password", password.value);
+
+    registerValues.push(
+      {
+        name: name.value,
+        email: email.value,
+        password: password.value,
+      }
+    );
+
+    window.localStorage.setItem("registerValues", JSON.stringify(registerValues));
 
     alert("Signed In Successfully!");
   } else {
@@ -63,13 +84,12 @@ if (location.href == `${location.origin}/build/pages/signup.html`) {
 if (location.href == `${location.origin}/build/pages/signin.html`) {
   document.querySelector("[name='loginBtn']").addEventListener("click", (e) => {
     e.preventDefault();
-    const email = document.querySelector("[name='loginName']");
+    const name= document.querySelector("[name='loginName']");
     const password = document.querySelector("[name='loginPassword']");
 
+    login(name, password);
 
-
-    login(email, password);
-
-
+    name.value = "";
+    password.value = "";
   });
 }
