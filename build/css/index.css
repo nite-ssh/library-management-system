@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -9,6 +10,8 @@ html {
 }
 
 body {
+  font-family: "Raleway", sans-serif;
+  font-size: 16px;
   background-color: #f4f4f4;
 }
 
@@ -75,11 +78,6 @@ a:hover {
   -webkit-filter: blur(2px);
 }
 
-body {
-  font-family: "Karla", sans-serif;
-  font-size: 16px;
-}
-
 .container {
   width: 80%;
   margin: auto;
@@ -93,7 +91,7 @@ body {
 .title--dash {
   text-align: center;
   margin-top: 3rem;
-  font-weight: 100;
+  font-weight: 300;
 }
 .title--auth {
   color: white;
@@ -102,7 +100,7 @@ body {
 .description {
   font-size: 1rem;
   font-style: italic;
-  font-weight: 100;
+  font-weight: 300;
   margin-bottom: 1rem;
 }
 
@@ -115,7 +113,7 @@ body {
 }
 
 .link {
-  font-weight: 200;
+  font-weight: 300;
   font-size: 1.5rem;
   color: #f4f4f4;
 }
@@ -253,6 +251,8 @@ body {
   padding: 0 1rem 0 0;
 }
 .navigation__links {
+  font-weight: bold;
+  letter-spacing: 0.01rem;
   width: 250px;
   display: flex;
   justify-content: space-around;

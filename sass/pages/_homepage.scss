@@ -12,6 +12,8 @@
   }
 
   &__links {
+    font-weight: bold;
+    letter-spacing:0.01rem;
     width: 250px;
     @include flex(space-around, center);
   }
