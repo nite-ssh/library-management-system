@@ -85,11 +85,6 @@ body {
   margin: auto;
 }
 
-.overlay {
-  padding: 2rem;
-  flex-direction: column;
-}
-
 .title {
   font-size: 1.8rem;
   color: #205375;
@@ -126,8 +121,50 @@ body {
   color: #205375;
 }
 
-.icons {
-  font-size: 2rem;
+.icons:hover {
+  cursor: pointer;
+}
+
+.modal {
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  max-width: 300px;
+  margin: 0 auto;
+  padding: 0;
+  background: #fff;
+  border-radius: 4px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+}
+
+#modal-close {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  font-size: 20px;
+}
+
+.overlay {
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.is-visible {
+  opacity: 1;
+  pointer-events: auto;
 }
 
 .warning {
@@ -183,10 +220,6 @@ body {
 }
 .input::placeholder {
   color: grey;
-}
-
-.edit-modal {
-  background-color: green;
 }
 
 .navigation {
@@ -398,6 +431,7 @@ body {
 .root .right-info {
   width: 100%;
   margin-left: 200px;
+  height: 100vh;
 }
 .root .right-info__dashboard-wrapper {
   height: 100vh;
@@ -435,6 +469,9 @@ body {
   padding: 2rem;
   align-items: center;
 }
+.root .right-info__admin-page {
+  height: 95vh;
+}
 .root .right-info .table__wrapper {
   width: 95%;
   margin: 0 auto;
@@ -446,6 +483,11 @@ body {
 .root .right-info .table__header {
   font-size: 24px;
   font-weight: 300;
+}
+.root .right-info .table__head-icons {
+  background-color: rgba(51, 51, 51, 0.055);
+  padding: 0.6rem;
+  text-align: right;
 }
 .root .right-info .table__head {
   border-spacing: 0;
@@ -480,6 +522,9 @@ body {
   padding: 10px;
   color: #666;
 }
+.root .right-info .table .fa-solid {
+  margin: 0rem 0.7rem;
+}
 @media (max-width: 700px) {
   .root .right-info .table {
     width: 90%;
@@ -505,6 +550,7 @@ body {
   width: 100%;
 }
 .root .right-info .action-strip__date-container {
+  width: 100%;
   display: flex;
   justify-content: space-around;
 }
@@ -518,4 +564,10 @@ body {
 }
 .root .right-info .action-strip__btn-wrapper {
   margin-left: 1rem;
+}
+.root .right-info .action-strip__checkbox-wrapper {
+  text-align: center;
+}
+.root .right-info .action-strip__checkbox {
+  margin-left: 0.4rem;
 }/*# sourceMappingURL=index.css.map */

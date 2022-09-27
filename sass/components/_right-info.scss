@@ -1,7 +1,7 @@
 .right-info {
   width: 100%;
   margin-left: 200px;
-
+  height: 100vh;
   &__dashboard-wrapper {
     height: 100vh;
     @include flex(center, center);
@@ -35,7 +35,11 @@
   }
 
   @import "./chart";
+  
+  &__admin-page{
+    height: 95vh
 
+  }
 
   @import "./table";
   @import "./action-strip";

@@ -1,6 +1,11 @@
-document.getElementById("modal").addEventListener("click", (event)=>{
-    event.preventDefault();
- const actionStrip=   document.querySelector(".action-strip");
+document.getElementById('add-info').addEventListener('click', function() {
+  document.querySelector('.overlay').classList.add('is-visible');
+  document.querySelector('.modal').classList.add('is-visible');
+});
 
-actionStrip.style.display = "none";
-})
+document.getElementById('modal-close').addEventListener('click', function() {
+  document.querySelector('.overlay').classList.remove('is-visible');
+  document.querySelector('.modal').classList.remove('is-visible');
+
+  });
+

@@ -14,9 +14,11 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
     integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/solid.min.css" integrity="sha512-uj2QCZdpo8PSbRGL/g5mXek6HM/APd7k/B5Hx/rkVFPNOxAQMXD+t+bG4Zv8OAdUpydZTU3UHmyjjiHv2Ww0PA==" crossorigin="anonymous" referrerpolicy="no-referrer" /> 
 
   <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
   <link rel="stylesheet" href="../css/index.css" />
+
 </head>
 
 <body class="root">
@@ -31,14 +33,14 @@
       </li>
 
       <li class="nav__link-wrapper">
-        <a class="nav__link" href="#admin">
+        <a class="nav__link"  href="#admin">
           <i class="fas fa-person"></i>
           <p class="nav__link-text">Admin</p>
         </a>
       </li>
 
       <li class="nav__link-wrapper">
-        <a class="nav__link" href="#admin" name="signOut">
+        <a class="nav__link" name="signOut">
           <i class="fas fa-hand"></i>
           <p class="nav__link-text">Sign Out</p>
         </a>
@@ -47,7 +49,7 @@
   </nav>
 
   <article class="right-info">
-    <article class="right-info__dashboard-data">
+    <article class="right-info__dashboard-data" id="dashboard">
       <section class="right-info__dashboard-wrapper">
         <div class="right-info__dashboard">
           <div class="card right-info__people">
@@ -90,7 +92,7 @@
 
 
     </article>
-    <section class="right-info__admin-page">
+    <section class="right-info__admin-page" id="admin">
 
       <div class="title title--dash">
         Book Information
@@ -98,6 +100,12 @@
       <article class="table">
         <table cellspacing="0" cellpadding="0" class="table__wrapper">
           <thead class="table__head">
+            <tr class="table__head-row">
+              <td class="table__head-icons" colspan="10">
+              <i id="add-info" class="fa-solid icons fa-plus"></i>
+              <i id="add-info" class="fa-solid icons fa-edit"></i>
+              </td>
+            </tr>
 
             <tr class="table__head-row">
               <td class="table__head-data">Name</td>
@@ -116,85 +124,109 @@
               <td class="table__body-data">test@testa.me</td>
               <td class="table__body-data">Maxime Nienow</td>
               <td class="table__body-data">Adminsda.a</td>
-              <td class="table__body-data">1</td>
+              <td class="table__body-data">9811233231</td>
+              <td class="table__body-data">2020-01-12</td>
+              <td class="table__body-data">2020-01-22</td>
+              <td class="table__body-data">Returned</td>
+              <td class="table__body-data"><i class="icons fa-solid fa-edit"></i></td>
+              <td class="table__body-data"><i class="icons fa-solid fa-trash"></i></td>
             </tr>
             <tr class="table__body-row">
               <td class="table__body-data">test@testa.me</td>
               <td class="table__body-data">Maxime Nienow</td>
               <td class="table__body-data">Adminsda.a</td>
-              <td class="table__body-data">1</td>
+              <td class="table__body-data">9812333231</td>
+              <td class="table__body-data">2020-01-12</td>
+              <td class="table__body-data">N/A</td>
+              <td class="table__body-data">Not Returned</td>
+              <td class="table__body-data"><i class="icons fa-solid fa-edit"></i></td>
+              <td class="table__body-data"><i class="icons fa-solid fa-trash"></i></td>
             </tr>
           </tbody>
         </table>
       </article>
 
-      <button id="modal">Show modal</button>
+      
 
-        <div class="card action-strip">
-          <form class="action-strip__wrapper">
-            <div class="action-strip__input-wrapper">
+      <div class="overlay">
+          <div class="card action-strip">
+          <i class="fas icons fa-close" id="modal-close"></i>
+            <form class="action-strip__wrapper">
               <div class="action-strip__input-wrapper">
-                <label for="name">Name</label>
-                <div>
-                  <input class="input action-strip__input" type=" text" id="name" placeholder="Enter your name" />
+                <div class="action-strip__input-wrapper">
+                  <label for="name">Name</label>
+                  <div>
+                    <input class="input action-strip__input" type=" text" id="name" placeholder="Enter your name" />
+                  </div>
+                </div>
+                <div class="action-strip__input-wrapper">
+                  <label for="book">Book Name</label>
+                  <div>
+                    <input class="input action-strip__input" type="text" id="book" placeholder="Enter the Book Name" />
+                  </div>
+                </div>
+                <div class="action-strip__input-wrapper">
+                  <label for="isbn">ISBN</label>
+                  <div>
+                    <input class="input action-strip__input" type="text" id="isbn" placeholder="Enter the ISBN" />
+                  </div>
+                </div>
+                <div class="action-strip__input-wrapper">
+                  <label for="contact">Contact No.</label>
+                  <div>
+                    <input class="input action-strip__input" type="text" id="contact"
+                      placeholder="Enter your contact Number" />
+                  </div>
                 </div>
               </div>
-              <div class="action-strip__input-wrapper">
-                <label for="book">Book Name</label>
-                <div>
-                  <input class="input action-strip__input" type="text" id="book" placeholder="Enter the Book Name" />
+             
+               
+            
+              <div class="action-strip__date-container">
+                <div class="action-strip__date-wrapper">
+                  <label class="action-strip__date-label-name" for="bookTakenIn">Book taken in</label>
+                  <div class="action-strip__textfield-wrapper">
+                    <input class="input action-strip__date" type="date" name="bookTakenIn" id="bookTakenIn " />
+                  </div>
+                </div>
+                <div class="action-strip__date-wrapper">
+                  <label class="action-strip__date-label-name" for="bookReturnDate">Book return date</label>
+                  <div class="action-strip__textfield-wrapper">
+                    <input class="input action-strip__date" type="date" name="bookReturnDate" id="bookReturnDate" />
+                  </div>
                 </div>
               </div>
-              <div class="action-strip__input-wrapper">
-                <label for="isbn">ISBN</label>
-                <div>
-                  <input class="input action-strip__input" type="text" id="isbn" placeholder="Enter the ISBN" />
-                </div>
-              </div>
-              <div class="action-strip__input-wrapper">
-                <label for="contact">Contact No.</label>
-                <div>
-                  <input class="input action-strip__input" type="text" id="contact"
-                    placeholder="Enter your contact Number" />
-                </div>
-              </div>
-            </div>
 
-            <div class="action-strip__date-container">
-              <div class="action-strip__date-wrapper">
-                <label class="action-strip__date-label-name" for="bookTakenIn">Book taken in</label>
-                <div class="action-strip__textfield-wrapper">
-                  <input class="input action-strip__date" type="date" name="bookTakenIn" id="bookTakenIn " />
+              <div class="action-strip__checkbox-wrapper">
+               
+                <label for="checkbox">Not Returned?</label>
+                <input class="input action-strip__checkbox" type="checkbox" name="checkbox" id="checkbox" />
+              </div>
+             
+              <div class="action-strip__btn-container">
+                <div class="action-strip__btn-wrapper">
+                  <button class="btn btn--clear" type="reset">Clear All</button>
+                </div>
+                <div class="action-strip__btn-wrapper">
+                  <button class="btn btn--submit" type="submit">Submit</button>
+                </div>
+                <div class="action-strip__btn-wrapper">
+                  <button class="btn btn--edit" type="button">Edit</button>
                 </div>
               </div>
-              <div class="action-strip__date-wrapper">
-                <label class="action-strip__date-label-name" for="bookReturnDate">Book return date</label>
-                <div class="action-strip__textfield-wrapper">
-                  <input class="input action-strip__date" type="date" name="bookReturnDate" id="bookReturnDate" />
-                </div>
-              </div>
-            </div>
-            <div class="action-strip__btn-container">
-              <div class="action-strip__btn-wrapper">
-                <button class="btn btn--clear" type="reset">Clear All</button>
-              </div>
-              <div class="action-strip__btn-wrapper">
-                <button class="btn btn--submit" type="submit">Submit</button>
-              </div>
-              <div class="action-strip__btn-wrapper">
-                <button class="btn btn--edit" type="button">Edit</button>
-              </div>
-            </div>
-          </form>
+            </form>
 
         </div>
+      </div>
+
+
     </section>
   </article>
   </section>
   <script src="../js/chart.js"></script>
-
   <script src="../js/addItem.js" type="module"></script>
-  <script src="../js/modal.js"></script>
+  <script src="../js/modal.js" type="module"></script>
+
 </body>
 
 </html>

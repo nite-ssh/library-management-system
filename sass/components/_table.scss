@@ -12,7 +12,11 @@
     font-weight: 300;
   }
 
-  
+  &__head-icons{
+    background-color: rgba(51, 51, 51, 0.055);
+  padding: 0.6rem;
+    text-align: right;
+  }
 
   &__head {
     border-spacing: 0;
@@ -59,38 +63,9 @@
     
   }
 
-
-
-
-
-  // &__head-tr:nth-child(1) {
-  //   background-color: $gray1;
-  //   border-radius: 10px 0 0 0;
-  // }
-
-  // &__head-tr:nth-last-child(1) {
-  //   border-radius: 0 10px 0 0;
-  // }
-
-  // &__head-td {
-  //   font-size: 18px;
-  //   font-weight: bold;
-  //   color: #666;
-  //   padding: 10px;
-  // }
-
-  // &__body {
-  //   &:hover {
-
-  //     box-shadow: 0 10px 20px -15px rgb(0 0 0 / 4%);
-  //     background-color: #ededed1c;
-  //   }
-  // }
-
-  // &__body-td {
-  //   padding: 20px 55px;
-  //   color: #666;
-  // }
+  .fa-solid{
+    margin: 0rem 0.7rem;
+  }
 
 }
 
