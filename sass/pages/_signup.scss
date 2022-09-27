@@ -1,55 +1,45 @@
 .signup {
-  @include flex(center, center);
-  .signup-left {
-    height: 50vh;
+  width: 90%;
 
-    @include flex(center, center);
-    &__overlay {
-      @include flex(center, center);
-    }
-    &__title {
-      text-align: center;
-    }
+  @include flex(center,center);
+  height: 100vh;
+  margin: auto;
 
-    &__btn {
-      width: 100%;
-      padding: 0.6rem 1rem;
-      text-align: center;
-      text-transform: uppercase;
-    }
+&__wrapper{
+   width: 80%; 
+  @include flex(center,center);
   }
-  .signup-right {
-    background-image: linear-gradient(
-        rgba(0, 0, 0, 0.5) 0%,
-        rgba(0, 0, 0, 0.5) 90%
-      ),
-      url(../../build/assets/images/signup-background.jpg);
-    height: 50vh;
-    @include flex(center, center);
-    &__overlay {
-      @include flex(center, center);
-    }
-    &__title {
-      color: rgb(234, 234, 242);
-      text-align: center;
-    }
-    &__description {
-      text-align: center;
-      color: $whiteColor;
-      line-height: 1.5rem;
-    }
 
-    &__btn {
-      font-size: 1rem;
+  &__card{
+    width: 50%;
+    height: 25.1rem;
+    text-align: center;
+  }
+  
+  &__banner{
+
+    color: white;
+    height: 25.1rem;
+    text-align: center;
+    padding:7rem 2rem;
+    background:linear-gradient(
+            rgba(0, 0, 0, 0.5) 0%,
+            rgba(0, 0, 0, 0.788) 90%
+          ),
+          url(../../build/assets/images/signup-background.jpg);;
+  }
+
+  &__banner-btn{
+    color:white;
+    border:2px solid rgba(65, 161, 225, 0.733);
+    width: 50%;
+    &:hover{
+
+      color: #dcdeeb;
       background-color: rgba(255, 255, 255, 0);
-      color: white;
-      border: 0.3rem dashed $secondaryColor;
-      padding: 1rem 2rem;
-      text-align: center;
-      text-transform: uppercase;
-      &:hover {
-        border-color: $primaryColor;
-      }
-    }
+      
   }
+ 
+
+}
 }

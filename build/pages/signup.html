@@ -4,80 +4,62 @@
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title></title>
-    <meta name="description" content="" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="../css/index.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
-      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-  </head>
 
-  <body>
-    <section class="signup card">
-      <button
-        class="btn signin__homebtn"
-        onclick="location.href='../index.html'"
-      >
-        <i class="fas fa-home"></i>
-      </button>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title></title>
+  <meta name="description" content="" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="../css/index.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
 
-      <article class="signup-left">
-        <div class="overlay signup-left__overlay">
-          <h1 class="signup-left__title title">Create Account</h1>
-          <form class="signup-left__form">
-            <div class="signup-left__name">
-              <input
-                type="text"
-                placeholder="Enter your name"
-                class="textfield signup-left__textfield"
-                name="registerName"
-              />
-            </div>
-            <div>
-              <input
-                type="email"
-                placeholder="Enter your email"
-                class="textfield signup-left__textfield"
-                name="registerEmail"
-              />
-            </div>
-            <div>
-              <input
-                type="password"
-                placeholder="Enter your password"
-                class="textfield signup-left__textfield"
-                name="registerPassword"
-              />
-            </div>
-            <button class="btn signup-left__btn" type="submit">Sign Up</button>
-          </form>
+<body>
+  <section class="signup">
+    <article class="signup__wrapper">
+      <div class="card signup__card">
+        <div class="signup__head-wrapper">
+          <div class="signup__btn-wrapper">
+            <button class="btn btn--home" onclick="location.href='../index.html'">
+              <i class="fas fa-home"></i>
+            </button>
+          </div>
+          <h1 class="title">Create Account</h1>
         </div>
-      </article>
 
-      <aside class="signup-right">
-        <div class="overlay signup-right__overlay">
-          <h1 class="signup-right__title">Already have an account?</h1>
-          <p class="description signup-right__description">
+        <form class="signup__form">
+          <div class="signup__input-wrapper">
+            <input type="text" placeholder="Enter your name" class="input" name="registerName" />
+          </div>
+          <div class="signup__input-wrapper">
+            <input type="email" placeholder="Enter your email" class="input" name="registerEmail" />
+          </div>
+
+          <div class="signup__input-wrapper">
+            <input type="password" placeholder="Enter your password" class="input" name="registerPassword" />
+          </div>
+          <button class="btn btn--auth" type="submit">Sign Up</button>
+        </form>
+      </div>
+
+      <aside class="card signup__banner">
+        <div class="signup__overlay">
+          <h1 class="title title--auth">Already have an account?</h1>
+          <p class="description">
             Click the button below to login with your credentials
           </p>
-          <button
-            class="btn signup-right__btn"
-            type="button"
-            onclick="location.href=`../pages/signin.html`"
-          >
-            Sign In
+          <button class="btn  signup__banner-btn" type="button" onclick="location.href=`../pages/signin.html`">
+            Log In
           </button>
         </div>
       </aside>
-    </section>
-    <script src="../js/auth.js" type="module"></script>
-  </body>
+
+    </article>
+  </section>
+  <script src="../js/auth.js" type="module"></script>
+</body>
+
 </html>

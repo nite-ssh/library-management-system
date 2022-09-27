@@ -22,6 +22,20 @@
       color: white;
     }
   }
+
+  &--home{
+    text-align: left;
+    border: none;
+
+    &:hover{
+      background-color:#130f4900;
+      color: #130f49;
+    }
+  }
+
+  &--auth{
+    width: 18rem;
+  }
   
   &--edit {
     display: none;

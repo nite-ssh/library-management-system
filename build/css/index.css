@@ -95,6 +95,9 @@ body {
   margin-top: 3rem;
   font-weight: 100;
 }
+.title--auth {
+  color: white;
+}
 
 .description {
   font-size: 1rem;
@@ -195,6 +198,17 @@ body {
   background-color: red;
   color: white;
 }
+.btn--home {
+  text-align: left;
+  border: none;
+}
+.btn--home:hover {
+  background-color: rgba(19, 15, 73, 0);
+  color: #130f49;
+}
+.btn--auth {
+  width: 18rem;
+}
 .btn--edit {
   display: none;
 }
@@ -272,124 +286,75 @@ body {
 }
 
 .signin {
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: auto;
+}
+.signin__wrapper {
+  width: 80%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.signin .signin-left {
-  height: 50vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.signin .signin-left__overlay {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.signin .signin-left__title {
+.signin__card {
+  width: 50%;
+  height: 25.1rem;
   text-align: center;
 }
-.signin .signin-left__btn {
-  padding: 1rem 2rem;
-  width: 100%;
-  text-align: center;
-  text-transform: uppercase;
-}
-.signin .signin-right {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 90%), url(../../build/assets/images/signin-background.jpg);
-  height: 50vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.signin .signin-right__overlay {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.signin .signin-right__title {
-  color: rgb(234, 234, 242);
-  text-align: center;
-}
-.signin .signin-right__description {
-  text-align: center;
-  color: #f4f4f4;
-  line-height: 1.5rem;
-}
-.signin .signin-right__btn {
-  font-size: 1rem;
-  background-color: rgba(255, 255, 255, 0);
+.signin__banner {
   color: white;
-  border: 0.3rem dashed #205375;
-  padding: 1rem 2rem;
+  height: 25.1rem;
   text-align: center;
-  text-transform: uppercase;
+  padding: 7rem 2rem;
+  background: linear-gradient(rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.788) 90%), url(../../build/assets/images/signin-background.jpg);
 }
-.signin .signin-right__btn:hover {
-  border-color: #112B3C;
+.signin__banner-btn {
+  color: white;
+  border: 2px solid rgba(65, 161, 225, 0.733);
+  width: 50%;
 }
-.signin .signin-right__signup-link {
-  color: #f4f4f4;
+.signin__banner-btn:hover {
+  color: #dcdeeb;
+  background-color: rgba(255, 255, 255, 0);
 }
 
 .signup {
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: auto;
+}
+.signup__wrapper {
+  width: 80%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.signup .signup-left {
-  height: 50vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.signup .signup-left__overlay {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.signup .signup-left__title {
+.signup__card {
+  width: 50%;
+  height: 25.1rem;
   text-align: center;
 }
-.signup .signup-left__btn {
-  width: 100%;
-  padding: 0.6rem 1rem;
-  text-align: center;
-  text-transform: uppercase;
-}
-.signup .signup-right {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 90%), url(../../build/assets/images/signup-background.jpg);
-  height: 50vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.signup .signup-right__overlay {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.signup .signup-right__title {
-  color: rgb(234, 234, 242);
-  text-align: center;
-}
-.signup .signup-right__description {
-  text-align: center;
-  color: #f4f4f4;
-  line-height: 1.5rem;
-}
-.signup .signup-right__btn {
-  font-size: 1rem;
-  background-color: rgba(255, 255, 255, 0);
+.signup__banner {
   color: white;
-  border: 0.3rem dashed #205375;
-  padding: 1rem 2rem;
+  height: 25.1rem;
   text-align: center;
-  text-transform: uppercase;
+  padding: 7rem 2rem;
+  background: linear-gradient(rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.788) 90%), url(../../build/assets/images/signup-background.jpg);
 }
-.signup .signup-right__btn:hover {
-  border-color: #112B3C;
+.signup__banner-btn {
+  color: white;
+  border: 2px solid rgba(65, 161, 225, 0.733);
+  width: 50%;
+}
+.signup__banner-btn:hover {
+  color: #dcdeeb;
+  background-color: rgba(255, 255, 255, 0);
 }
 
 .root {

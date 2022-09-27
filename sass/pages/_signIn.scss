@@ -1,64 +1,45 @@
-.signin {
-  @include flex(center, center);
+.signin{
+  width: 90%;
 
-  .signin-left {
-    height: 50vh;
+  @include flex(center,center);
+  height: 100vh;
+  margin: auto;
 
-    @include flex(center, center);
-    &__overlay {
-      @include flex(center, center);
-    }
-
-    &__title {
-      text-align: center;
-    }
-
-    &__btn {
-      padding: 1rem 2rem;
-      width: 100%;
-      text-align: center;
-      text-transform: uppercase;
-    }
+&__wrapper{
+   width: 80%; 
+  @include flex(center,center);
   }
-  .signin-right {
-    background-image: linear-gradient(
-        rgba(0, 0, 0, 0.5) 0%,
-        rgba(0, 0, 0, 0.5) 90%
-      ),
-      url(../../build/assets/images/signin-background.jpg);
-    height: 50vh;
-    @include flex(center, center);
 
-    &__overlay {
-      @include flex(center, center);
-    }
+  &__card{
+    width: 50%;
+    height: 25.1rem;
+    text-align: center;
+  }
+  
+  &__banner{
 
-    &__title {
-      color: rgb(234, 234, 242);
-      text-align: center;
-    }
+    color: white;
+    height: 25.1rem;
+    text-align: center;
+    padding:7rem 2rem;
+    background:linear-gradient(
+            rgba(0, 0, 0, 0.5) 0%,
+            rgba(0, 0, 0, 0.788) 90%
+          ),
+          url(../../build/assets/images/signin-background.jpg);;
+  }
 
-    &__description {
-      text-align: center;
-      color: $whiteColor;
-      line-height: 1.5rem;
-    }
+  &__banner-btn{
+    color:white;
+    border:2px solid rgba(65, 161, 225, 0.733);
+    width: 50%;
+    &:hover{
 
-    &__btn {
-      font-size: 1rem;
+      color: #dcdeeb;
       background-color: rgba(255, 255, 255, 0);
-      color: white;
-      border: 0.3rem dashed $secondaryColor;
-      padding: 1rem 2rem;
-      text-align: center;
-      text-transform: uppercase;
-      &:hover {
-        border-color: $primaryColor;
-      }
-    }
-
-    &__signup-link {
-      color: $whiteColor;
-    }
+      
   }
+ 
+
+}
 }
