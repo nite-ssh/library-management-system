@@ -10,25 +10,22 @@ export const validation = (selectedElement) => {
   }
 };
 
-const login = (email, password) => {
-  if (validation(email) == true && validation(password) == true) {
+const login = (name, password) => {
+  if (validation(name) == true && validation(password) == true) {
     if (
-      email.value == localStorage.getItem("email") &&
+      name.value == localStorage.getItem("name") &&
       password.value == localStorage.getItem("password")
     ) {
-      if (location.href == `${location.origin}/library-management-system/build/pages/signin.html`) {
-        document
-          .querySelector(".signin-left__btn")
-          .addEventListener("click", (e) => {
-            location.href = "../pages/dashboard.html";
-          });
-      }
-      return;
+      location.href = "../pages/dashboard.html";
+    }else{
+      alert("Wrong Credentials");
     }
-    alert("Wrong Credentials");
     return;
   }
-};
+  alert("Empty Credentials");
+  return;
+}
+
 
 const register = (name, email, password) => {
   if (
@@ -46,8 +43,8 @@ const register = (name, email, password) => {
   }
 };
 
-if (location.href == `${location.origin}/library-management-system/build/pages/signup.html`) {
-  document.querySelector(".signup-left__btn").addEventListener("click", (e) => {
+if (location.href == `${location.origin}/build/pages/signup.html`) {
+  document.querySelector("[name='signupBtn']").addEventListener("click", (e) => {
     e.preventDefault();
     //selectors
     const name = document.querySelector("[name='registerName']");
@@ -59,14 +56,20 @@ if (location.href == `${location.origin}/library-management-system/build/pages/s
     name.value = "";
     email.value = "";
     password.value = "";
+
   });
 }
 
-if (location.href == `${location.origin}/library-management-system/build/pages/signin.html`) {
-  document.querySelector(".signin-left__btn").addEventListener("click", (e) => {
-    const email = document.querySelector("[name='loginEmail']");
-    const password = document.querySelector("[name='loginPassword']");
+if (location.href == `${location.origin}/build/pages/signin.html`) {
+  document.querySelector("[name='loginBtn']").addEventListener("click", (e) => {
     e.preventDefault();
+    const email = document.querySelector("[name='loginName']");
+    const password = document.querySelector("[name='loginPassword']");
+
+
+
     login(email, password);
+
+
   });
 }
