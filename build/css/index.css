@@ -7,12 +7,17 @@
 
 html {
   scroll-behavior: smooth;
+  text-decoration: none;
 }
 
 body {
   font-family: "Raleway", sans-serif;
   font-size: 16px;
   background-color: #f4f4f4;
+}
+
+ul li {
+  list-style-type: none;
 }
 
 a {
@@ -90,7 +95,6 @@ a:hover {
 }
 .title--dash {
   text-align: center;
-  margin-top: 3rem;
   font-weight: 300;
 }
 .title--auth {
@@ -188,26 +192,27 @@ a:hover {
   color: white;
   background-color: #1a1564;
 }
-.btn--clear {
+.btn--warning {
   color: red;
-  border-color: red;
+  border-color: rgba(255, 0, 0, 0);
 }
-.btn--clear:hover {
+.btn--warning:hover {
   background-color: red;
   color: white;
 }
-.btn--home {
+.btn--primary {
   text-align: left;
   border: none;
 }
-.btn--home:hover {
+.btn--primary:hover {
   background-color: rgba(19, 15, 73, 0);
   color: #130f49;
 }
-.btn--auth {
-  width: 18rem;
+.btn--secondary {
+  padding: 0.8rem;
+  width: 16.5rem;
 }
-.btn--edit {
+.btn--ternary {
   display: none;
 }
 
@@ -217,8 +222,6 @@ a:hover {
   border-radius: 0.2rem;
   outline: none;
   background-color: rgba(102, 102, 102, 0.096);
-  margin-bottom: 1rem;
-  margin-top: 0.5rem;
 }
 .input:active {
   outline: none;
@@ -250,7 +253,7 @@ a:hover {
   font-size: 1.6rem;
   padding: 0 1rem 0 0;
 }
-.navigation__links {
+.navigation__lists {
   font-weight: bold;
   letter-spacing: 0.01rem;
   width: 250px;
@@ -299,6 +302,9 @@ a:hover {
   justify-content: center;
   align-items: center;
 }
+.signin__input-wrapper {
+  margin-top: 1.2rem;
+}
 .signin__card {
   width: 50%;
   height: 25.1rem;
@@ -334,6 +340,9 @@ a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.signup__input-wrapper {
+  margin-top: 1.2rem;
 }
 .signup__card {
   width: 50%;
@@ -374,20 +383,20 @@ a:hover {
   text-align: center;
   margin-bottom: 30px;
 }
-.root .nav__link-wrapper {
+.root .nav__wrapper {
   padding: 15px;
   border-bottom: 1px solid #bdb8d7;
   border-bottom: 1px solid rgba(0, 0, 0, 0.05);
   border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
-.root .nav__link-wrapper:hover {
+.root .nav__wrapper:hover {
   background-color: #205375;
 }
-.root .nav__link {
+.root .nav__item {
   color: #bdb8d7;
   display: flex;
 }
-.root .nav__link:hover {
+.root .nav__item:hover {
   color: #fff;
 }
 .root .nav .fas {
@@ -411,7 +420,7 @@ a:hover {
   justify-content: center;
   align-items: center;
 }
-.root .right-info__people, .root .right-info__books, .root .right-info__admin {
+.root .right-info__info {
   margin: 2rem;
   padding: 2rem 1rem;
   font-size: 1.1rem;
@@ -475,11 +484,7 @@ a:hover {
 .root .right-info .table__head-data:nth-child(1) {
   border-radius: 0 10px 0 0;
 }
-.root .right-info .table__body-row {
-  transition: all 0.2s;
-}
 .root .right-info .table__body-row:hover {
-  transform: translateY(-2px);
   box-shadow: 0 10px 20px -15px rgba(0, 0, 0, 0.04);
   background-color: rgba(237, 237, 237, 0.1098039216);
 }
@@ -498,7 +503,7 @@ a:hover {
 .root .right-info .action-strip {
   width: 40%;
   background-color: white;
-  margin: 3rem auto 5rem auto;
+  margin: 0.8rem auto 5rem auto;
   padding: 2rem 0rem;
 }
 .root .right-info .action-strip__wrapper {
@@ -510,6 +515,8 @@ a:hover {
 .root .right-info .action-strip__input {
   padding: 1rem 1rem;
   width: 100%;
+  margin-bottom: 1rem;
+  margin-top: 0.5rem;
 }
 .root .right-info .action-strip__textfield {
   width: 100%;
@@ -518,9 +525,6 @@ a:hover {
   width: 100%;
   display: flex;
   justify-content: space-around;
-}
-.root .right-info .action-strip__date {
-  padding: 1rem;
 }
 .root .right-info .action-strip__btn-container {
   display: flex;
@@ -531,6 +535,7 @@ a:hover {
   margin-left: 1rem;
 }
 .root .right-info .action-strip__checkbox-wrapper {
+  margin-top: 1rem;
   text-align: center;
 }
 .root .right-info .action-strip__checkbox {

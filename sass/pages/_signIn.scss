@@ -6,14 +6,20 @@
   margin: auto;
 
 &__wrapper{
+
    width: 80%; 
   @include flex(center,center);
+  }
+
+  &__input-wrapper{
+    margin-top:1.2rem;
   }
 
   &__card{
     width: 50%;
     height: 25.1rem;
     text-align: center;
+
   }
   
   &__banner{
@@ -39,7 +45,7 @@
       background-color: rgba(255, 255, 255, 0);
       
   }
- 
+
 
 }
 }

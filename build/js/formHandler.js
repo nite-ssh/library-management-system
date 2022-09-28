@@ -1,5 +1,52 @@
+import { validation } from "./auth.js";
+
+document
+  .querySelector(".action-strip__checkbox")
+  .addEventListener("click", (e) => {
+    const returnBookDate = document.querySelector("[name='bookReturnDate']");
+
+    if (document.querySelector(".action-strip__checkbox").checked) {
+      returnBookDate.setAttribute("readonly", "readonly");
+    }
+
+    if (!document.querySelector(".action-strip__checkbox").checked) {
+      returnBookDate.removeAttribute("readonly");
+    }
+  });
+
+  const submitBtnHandler= () =>{
+    
+  const userValues = [];
+    document.querySelector(".btn--submit").addEventListener("click", (event)=>{
+      event.preventDefault();
+      const formValues = {
+        name :  document.querySelector("#name").value,
+        book :  document.querySelector("#book").value,
+        isbn:  document.querySelector("#isbn").value,
+        contact:  document.querySelector("#contact").value,
+        dates:{
+          bookTakenIn: document.querySelector("#bookTakenIn").value,
+          bookreturnDate: document.querySelector("#bookReturnDate").value,
+        },
+        checkbox: document.querySelector("#checkbox").checked
+      }
 
 
+      validation(formValues.name.target.parentNode);
+
+        console.log(document.querySelector("#bookTakenIn").value);
+
+        console.log(formValues);
+
+    })
+
+  }
+
+  submitBtnHandler();
+
+  // if(document.querySelector(".action-strip__checkbox").value == "on"){
+//     document.querySelector("[name='bookReturnDate']").style.display = "none";
+// }
 
 // import { validation } from "./auth.js";
 // import { deleteItem } from "./deleteItem.js";

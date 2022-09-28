@@ -48,9 +48,7 @@
   }
 
   &__body-row {
-    transition: $transition;
 &:hover {
-      transform: translateY(-2px);
       box-shadow: 0 10px 20px -15px rgb(0 0 0 / 4%);
       background-color: #ededed1c;
     }

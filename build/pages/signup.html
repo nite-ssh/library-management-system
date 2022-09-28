@@ -8,13 +8,14 @@
 <head>
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title></title>
+  <title>Library Management System</title>
   <meta name="description" content="" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="../css/index.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
     integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" href="../assets/favicon.ico" type="image/x-icon">
 </head>
 
 <body>
@@ -23,7 +24,7 @@
       <div class="card signup__card">
         <div class="signup__head-wrapper">
           <div class="signup__btn-wrapper">
-            <button class="btn btn--home" onclick="location.href='../index.html'">
+            <button class="btn btn--primary" onclick="location.href='../index.html'">
               <i class="fas fa-home"></i>
             </button>
           </div>
@@ -41,7 +42,7 @@
           <div class="signup__input-wrapper">
             <input type="password" placeholder="Enter your password" class="input" name="registerPassword" />
           </div>
-          <button class="btn btn--auth" type="submit" name="signupBtn">Sign Up</button>
+          <button class="btn btn--secondary signin__input-wrapper" type="submit" name="signupBtn">Sign Up</button>
         </form>
       </div>
 
@@ -51,7 +52,7 @@
           <p class="description">
             Click the button below to login with your credentials
           </p>
-          <button class="btn  signup__banner-btn" type="button" onclick="location.href=`../pages/signin.html`">
+          <button class="btn  signup__banner-btn signin__input-wrapper" type="button" onclick="location.href=`../pages/signin.html`">
             Log In
           </button>
         </div>

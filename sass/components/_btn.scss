@@ -14,16 +14,18 @@
     background-color: #1a1564 ;
   }
 
-  &--clear {
+  //--clear
+  &--warning{
     color: red;
-    border-color: red;
+    border-color: rgba(255, 0, 0, 0);
     &:hover {
       background-color:red;
       color: white;
     }
   }
 
-  &--home{
+  //--home
+  &--primary{
     text-align: left;
     border: none;
 
@@ -33,11 +35,14 @@
     }
   }
 
-  &--auth{
-    width: 18rem;
+  //--auth
+  &--secondary{
+    padding: 0.8rem;
+    width:16.5rem;
   }
   
-  &--edit {
+  //--edit
+  &--ternary{
     display: none;
   }
 }

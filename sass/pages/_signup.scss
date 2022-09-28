@@ -9,6 +9,9 @@
    width: 80%; 
   @include flex(center,center);
   }
+&__input-wrapper{
+    margin-top:1.2rem;
+  }
 
   &__card{
     width: 50%;

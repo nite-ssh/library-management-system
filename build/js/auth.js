@@ -15,12 +15,12 @@ const login = (name, password) => {
 
 
 
-  if (validation(name) == true && validation(password) == true) {
+  if (validation(name) && validation(password)) {
     const valueReturner = registerValueGetter.every((values) => {
-      debugger;
+      
       if (
-        name.value == values.name &&
-        password.value == values.password
+        name.value === values.name &&
+        password.value === values.password
       ) {
 
         return true;
@@ -43,9 +43,9 @@ const registerValues = [];
 
 const register = (name, email, password) => {
   if (
-    validation(name) == true &&
-    validation(email) == true &&
-    validation(password) == true
+    validation(name) &&
+    validation(email) &&
+    validation(password) 
   ) {
 
     registerValues.push(
@@ -64,7 +64,7 @@ const register = (name, email, password) => {
   }
 };
 
-if (location.href == `${location.origin}/build/pages/signup.html`) {
+if (location.href === `${location.origin}/build/pages/signup.html`) {
   document.querySelector("[name='signupBtn']").addEventListener("click", (e) => {
     e.preventDefault();
     //selectors
@@ -81,7 +81,7 @@ if (location.href == `${location.origin}/build/pages/signup.html`) {
   });
 }
 
-if (location.href == `${location.origin}/build/pages/signin.html`) {
+if (location.href === `${location.origin}/build/pages/signin.html`) {
   document.querySelector("[name='loginBtn']").addEventListener("click", (e) => {
     e.preventDefault();
     const name= document.querySelector("[name='loginName']");

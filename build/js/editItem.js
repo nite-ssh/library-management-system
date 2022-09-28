@@ -1,4 +1,4 @@
-import { btnClickHandler } from "./addItem.js";
+import { btnClickHandler } from "./formHandler.js";
 
 export function editItem(event) {
   document.querySelector(".btn--edit").style.display = "block";
