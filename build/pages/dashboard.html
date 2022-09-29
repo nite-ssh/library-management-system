@@ -144,7 +144,7 @@
       <div class="overlay">
 
         <div class="card action-strip">
-          <div class="title title--dash">
+          <div class="title title--dash" id="actionTitle">
             Add Info
           </div>
           <i class="fas icons fa-close" id="modal-close"></i>
@@ -171,6 +171,7 @@
               </div>
               <div class="action-strip__input-wrapper">
                 <label for="contact">Contact Number</label>
+                <label style="display: hidden;" id="indexValue"></label>
                 <div>
                   <input class="input action-strip__input" type="text" id="contact"
                     placeholder="Enter your Contact Number" />
@@ -207,10 +208,10 @@
                 <button class="btn btn--warning" type="reset">Clear All</button>
               </div>
               <div class="action-strip__btn-wrapper">
-                <button class="btn" type="submit" name="submitBtn">Submit</button>
+                <button class="btn" type="submit" name="submitBtn" id="submitBtn">Submit</button>
               </div>
               <div class="action-strip__btn-wrapper">
-                <button class="btn btn--ternary" type="button">Edit</button>
+                <button class="btn btn--ternary" type="button" id="editBtn">Edit</button>
               </div>
             </div>
           </form>

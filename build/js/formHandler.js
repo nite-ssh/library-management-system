@@ -12,6 +12,8 @@ document
     }
   });
 
+  document.querySelector("#modal-close").addEventListener
+
 const returnedValues = JSON.parse(window.localStorage.getItem("userValues"));
 let userValues = returnedValues ? returnedValues : [];
 
@@ -28,7 +30,7 @@ const dataInsertionHandler = () => {
     <td class="table__body-data">${values.dates.bookreturnDate}</td>
     <td class="table__body-data">${values.checkbox ? "Not Returned" : "Returned"
       }</td>
-    <td class="table__body-data"><i class="icons fa-solid fa-edit" name="editBtn"></i></td>
+    <td class="table__body-data"><i class="icons fa-solid fa-edit" name="editBtn" id="penBtn"></i></td>
     <td class="table__body-data"><i class="icons fa-solid fa-trash" name="trashBtn"></i></td>
   </tr>
     `);
@@ -84,20 +86,59 @@ const deleteBtnHandler = () => {
 
 deleteBtnHandler();
 
-const editBtnHandler = () => {
-  document.querySelectorAll("[name='editBtn']").forEach((element, i) => {
+ const formValues = {
+        name: document.querySelector("#name").value,
+        book: document.querySelector("#book").value,
+        isbn: document.querySelector("#isbn").value,
+        contact: document.querySelector("#contact").value,
+        dates: {
+          bookTakenIn: document.querySelector("#bookTakenIn").value,
+          bookreturnDate: document.querySelector("#bookReturnDate").value,
+        },
+        checkbox: document.querySelector("#checkbox").checked,
+      };
 
+const penBtnHandler = () => {
+  document.querySelectorAll("#penBtn").forEach((element, i) => {
     element.addEventListener("click", (event) => {
-
       event.preventDefault();
       document.querySelector(".fa-plus").click();
-      console.log(event);
+
+      document.querySelector("#actionTitle").innerHTML = "Edit Info";
+      document.querySelector("#editBtn").style.display = "block";
+      document.querySelector("#submitBtn").style.display = "none";
+
+      const index = event.target.parentNode.parentNode.getAttribute("id");
+
+      console.log(userValues[index]);
+      document.querySelector("#name").value = userValues[index].name;
+      document.querySelector("#book").value= userValues[index].book;
+      document.querySelector("#isbn").value= userValues[index].isbn;
+      document.querySelector("#contact").value= userValues[index].contact;
+      document.querySelector("#bookTakenIn").value= userValues[index].dates.bookTakenIn;
+      document.querySelector("#bookReturnDate").value= userValues[index].dates.bookreturnDate;
+      document.querySelector("#checkbox").checked= userValues[index].checkbox.checked;
+
+      document.querySelector("#indexValue").value = index;
+
+
+    
+
     });
   });
 }
+penBtnHandler();
+
+const editBtnHandler = () => {
+  document.querySelector("#editBtn").addEventListener("click", () => {
+    const indexedValue = document.querySelector("#indexValue").value;
+   
+
+      console.log(userValues[indexedValue]);
+      
+  })
+}
 editBtnHandler();
-
-
 
 // if(document.querySelector(".action-strip__checkbox").value == "on"){
 //     document.querySelector("[name='bookReturnDate']").style.display = "none";
